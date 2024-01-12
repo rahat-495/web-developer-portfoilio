@@ -1,5 +1,7 @@
 /* common shared styles */
 body {
+  margin: 0px;
+  padding: 0px;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -17,18 +19,18 @@ body {
   color: white;
   padding: 15px 35px;
   cursor: pointer;
-  transition: all ease 0.2s ;
+  transition: all ease 0.2s;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
   border: solid #fd6e0a 1px;
   border-radius: 5px;
   padding: 15px 35px;
   cursor: pointer;
   font-size: 19px;
   margin-left: 20px;
-  background-color: transparent ;
-  transition: all ease 0.2s ;
+  background-color: transparent;
+  transition: all ease 0.2s;
   color: black;
 }
 
@@ -73,6 +75,7 @@ nav li a {
 
 /* header releted styles */
 .header {
+  width: 100%;
   background-color: #fff8f3;
   background-image: url("../images/header_bg.png"),
     url("../images/developer.png");
@@ -89,6 +92,7 @@ nav li a {
 .banner .banner-picture img {
   width: 550px;
   margin-left: 110%;
+  margin-bottom: -5px;
 }
 
 .banner-greeting {
@@ -120,11 +124,11 @@ nav li a {
   cursor: pointer;
   font-size: 19px;
   margin-left: 20px;
-  background-color: transparent ;
-  transition: all ease 0.2s ;
+  background-color: transparent;
+  transition: all ease 0.2s;
 }
 
-.btn-letest:hover{
+.btn-letest:hover {
   border: none;
   outline: none;
   background-color: #fd6e0a;
@@ -188,7 +192,7 @@ main .about {
   line-height: 30px;
 }
 
-what-i-do-section {
+.what-i-do-section {
   width: 1140px;
   margin: 0 auto;
 }
@@ -379,7 +383,7 @@ footer {
   margin-bottom: 24px;
 }
 
-.name-div > input{
+.name-div > input {
   width: 90%;
   height: 50%;
   font-size: 16px;
@@ -388,7 +392,7 @@ footer {
   margin-left: 30px;
 }
 
-.email-div{
+.email-div {
   border-radius: 5px;
   background: #fff;
   width: 461px;
@@ -399,7 +403,7 @@ footer {
   margin-bottom: 24px;
 }
 
-.email-div > input{
+.email-div > input {
   width: 90%;
   height: 50%;
   font-size: 16px;
@@ -408,7 +412,7 @@ footer {
   outline: none;
 }
 
-.massage-div{
+.massage-div {
   border-radius: 5px;
   background: #fff;
   width: 461px;
@@ -418,11 +422,149 @@ footer {
   margin-bottom: 24px;
 }
 
-.massage-div > input{
+.massage-div > input {
   width: 90%;
   height: 50%;
   font-size: 16px;
   border: none;
   margin-left: 30px;
   outline: none;
+}
+
+@media screen and (max-width: 576px) {
+  /* header part started ! */
+  .header {
+    background-image: none;
+  }
+
+  nav,
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav > ul li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .banner {
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner-greeting {
+    font-size: 35px;
+  }
+
+  .banner-title {
+    font-size: 45px;
+  }
+
+  .banner-description {
+    width: 350px;
+  }
+
+  .banner-text,
+  .banner .banner-picture img {
+    width: 100%;
+  }
+
+  .banner .banner-picture img {
+    margin: 0px auto -10px auto;
+  }
+
+  .btn-letest,
+  .btn-primary {
+    padding: 5px 10px;
+  }
+
+  /* main part start ! */
+
+  .resume-section,
+  .skills-container,
+  .what-i-do-section,
+  .resume-colume,
+  main {
+    max-width: 100%;
+  }
+
+  main .about {
+    width: 100%;
+    padding: 0px;
+    margin: 0px 4px;
+  }
+
+  .about-info-container .about-info {
+    width: auto;
+    text-align: center;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+  }
+
+  .about-info .info-title {
+    color: #757575;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0px;
+  }
+
+  .info-description {
+    font-size: 16px;
+  }
+
+  footer,
+  .footer-section,
+  .skills-container,
+  .resume-container,
+  .resume-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .resume-colume,
+  .footer-item-sections {
+    width: 100%;
+    margin-left: 10px;
+  }
+
+  .resume-descri {
+    width: 100%;
+  }
+
+  .resume-colume hr {
+    width: 100%;
+  }
+
+  .footer-des {
+    width: 100%;
+  }
+
+  footer{
+    height: auto;
+  }
+
+  .name-div ,
+  .email-div{
+    width: 90%;
+    height: 80px;
+  }
+
+  .massage-div {
+    border-radius: 5px;
+    background: #fff;
+    width: 90%;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
 }
